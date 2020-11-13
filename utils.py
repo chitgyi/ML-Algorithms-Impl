@@ -9,5 +9,5 @@ def euclidian_dis(a, b):
     return np.sqrt(np.sum((a - b)**2))
 
 
-def accuracy(expected, predictons):
-    return np.sum(expected == predictons) / len(expected)
+def accuracy(expected, predictions):
+    return np.sum(expected == predictions) / len(expected)
