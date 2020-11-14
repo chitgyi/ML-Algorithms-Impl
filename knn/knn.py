@@ -25,7 +25,7 @@ class KNN:
             utils.euclidian_dis(x, x_train) for x_train in self.X_Train
         ]
 
-        ### take 3 neghtbors from sorted distances
+        ### take k neghtbors from sorted distances that return indices
         k_indices = np.argsort(distances)[:self.k]
         # print('K-Indices', k_indices)
 
