@@ -11,6 +11,9 @@ class LogisticRegression:
         self.weights = None
         self.biases = None
 
+    def mse(self, expected, predictions):
+        return utils.mean_square_error(expected, predictions)
+
     def fit(self, X, y):
         n_samples, n_features = X.shape
         self.weights = np.zeros(n_features)

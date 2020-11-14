@@ -1,6 +1,7 @@
 import numpy as np
-
-np.seterr(divide='ignore', invalid='ignore')
+import sys
+sys.path.insert(1, './../')
+import utils
 
 
 ### n_features == weights
@@ -10,6 +11,9 @@ class LinearRegression:
         self.iterates = iterates
         self.weights = None
         self.biases = None
+
+    def mse(self, expected, predictions):
+        return utils.mean_square_error(expected, predictions)
 
     def fit(self, X, y):
         n_samples, n_features = X.shape
