@@ -10,7 +10,7 @@ X, y = datasets.data, datasets.target
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
-regressor = LogisticRegression()
+regressor = LogisticRegression(learning_rate=0.0001)
 regressor.fit(X, y)
 predictions = regressor.predit([X_test[0]])
 print(predictions)
